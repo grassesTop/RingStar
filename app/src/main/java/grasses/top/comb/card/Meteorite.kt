@@ -10,5 +10,7 @@ class Meteorite: Card() {
         formula = arrayListOf(BaseElement.Earth,BaseElement.Earth,BaseElement.Earth,BaseElement.Earth,BaseElement.Earth)
         description = ""
         spellDuration = 50
+
+        
     }
 }
