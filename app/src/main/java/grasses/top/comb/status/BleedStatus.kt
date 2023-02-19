@@ -1,6 +1,6 @@
 package grasses.top.comb.status
 
-import grasses.top.comb.base.BattleProcess
+import grasses.top.comb.process.BattleProcess
 import grasses.top.comb.base.Status
 import grasses.top.comb.process.Turn
 
@@ -18,26 +18,6 @@ class BleedStatus():Status() {
         if (layer == 0){
             organicSubstance?.removeStatus(this)
         }
-    }
-
-    override fun onBattleStart(battleProcess: BattleProcess) {
-
-    }
-
-    override fun onBattleEnd() {
-
-    }
-
-    override fun onTurnStart(turn: Turn) {
-
-    }
-
-    override fun onTurnChoiceCardStart() {
-
-    }
-
-    override fun onTurnEffectSkill() {
-
     }
 
     override fun onTurnEnd() {

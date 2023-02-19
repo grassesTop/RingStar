@@ -3,7 +3,7 @@ package grasses.top.comb.card.fire
 import grasses.top.comb.base.BaseElement
 import grasses.top.comb.base.Card
 
-class BigFireBall : Card() {
+class BigFireBallSpell : Card() {
     init {
         name = "大火球"
         star = 2

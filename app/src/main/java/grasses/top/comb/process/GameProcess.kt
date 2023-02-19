@@ -1,4 +1,6 @@
-package grasses.top.comb.base
+package grasses.top.comb.process
+
+import grasses.top.comb.process.BattleProcess
 
 /**
  * 游戏流程

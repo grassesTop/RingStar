@@ -1,9 +1,8 @@
 package grasses.top.comb.status
 
-import grasses.top.comb.base.BattleProcess
+import grasses.top.comb.process.BattleProcess
 import grasses.top.comb.base.Status
 import grasses.top.comb.process.Turn
-import grasses.top.comb.thing.OrganicSubstance
 import grasses.top.comb.user.Resistance
 
 class PetrificationStatus:Status() {

@@ -1,6 +1,8 @@
 package grasses.top.comb.base
 
 import grasses.top.comb.process.BattleLife
+import grasses.top.comb.process.BattleProcess
+import grasses.top.comb.process.Turn
 import grasses.top.comb.process.TurnLife
 import grasses.top.comb.thing.OrganicSubstance
 import grasses.top.comb.user.Resistance
@@ -20,8 +22,12 @@ abstract class Status : BattleLife ,TurnLife {
     var isShowBattleIcon = true
     var description = ""
     var organicSubstance : OrganicSubstance? = null
-    abstract fun inCreateLayer()
-    abstract fun disCreateLayer()
+    /**
+     * 该状态所属属性
+     */
+    var elementSeries : BaseElement = BaseElement.None
+    open fun inCreateLayer(){}
+    open fun disCreateLayer(){}
     open fun attach(user: OrganicSubstance){
         this.organicSubstance = user
     }
@@ -36,5 +42,33 @@ abstract class Status : BattleLife ,TurnLife {
 
     open fun getOffsetResistance():Resistance.ResistanceData?{
         return null
+    }
+
+    override fun onBattleStart(battleProcess: BattleProcess) {
+
+    }
+
+    override fun onBattleEnd() {
+
+    }
+
+    override fun onTurnStart(turn: Turn) {
+
+    }
+
+    override fun onTurnChoiceCardStart() {
+
+    }
+
+    override fun onTurnEffectSkill() {
+
+    }
+
+    override fun onTurnEnd() {
+
+    }
+
+    open fun onHit(card : Card):Boolean{
+        return true
     }
 }

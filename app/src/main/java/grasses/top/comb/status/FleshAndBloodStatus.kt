@@ -1,6 +1,6 @@
 package grasses.top.comb.status
 
-import grasses.top.comb.base.BattleProcess
+import grasses.top.comb.process.BattleProcess
 import grasses.top.comb.base.Status
 import grasses.top.comb.process.Turn
 

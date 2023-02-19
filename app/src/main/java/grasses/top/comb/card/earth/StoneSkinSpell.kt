@@ -4,7 +4,7 @@ import grasses.top.comb.base.BaseElement
 import grasses.top.comb.base.Card
 import grasses.top.comb.status.StoneSkinStatus
 
-class StoneSkin : Card(){
+class StoneSkinSpell : Card(){
     init {
         name = "石肤术"
         elementSeries = BaseElement.Earth

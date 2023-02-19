@@ -4,7 +4,7 @@ import java.lang.StringBuilder
 
 open class Card() {
     companion object {
-        val sAllCards = HashMap<String,Class<out Card>>()
+        val sAllCards = HashMap<String, Class<out Card>>()
     }
 
     var name = ""
@@ -14,18 +14,19 @@ open class Card() {
      */
     var star = 0
     var description = ""
-    var formula : ArrayList<BaseElement> = arrayListOf()
+    var formula: ArrayList<BaseElement> = arrayListOf()
     var spellDuration = 20
     var elementSeries = BaseElement.None
-    var speller : User? = null
+    var speller: User? = null
+    var isActive = false
 
 
     /**
      * 返回一个字符串,每个位置表示对应属性的数量,新增的元素放在最后面
      */
-    val formulaString:String by lazy{
+    val formulaString: String by lazy {
         var formulaSb = StringBuilder()
-        repeat(BaseElementCount){ index->
+        repeat(BaseElementCount) { index ->
             formulaSb.append(formula.count { it.index == index })
         }
         formulaSb.toString()
@@ -34,7 +35,7 @@ open class Card() {
     /**
      * 升级
      */
-    open fun upgrade(element: BaseElement):Card?{
+    open fun upgrade(element: BaseElement): Card? {
         return null
     }
 
@@ -43,7 +44,7 @@ open class Card() {
      */
     var type = 0
 
-    constructor(name: String) :this (){
+    constructor(name: String) : this() {
         this.name = name
     }
 
@@ -69,18 +70,34 @@ open class Card() {
 
 
     /**
-     * 释放法术
+     * 释放法术,开始读条
      */
-    open fun spell(spellDuration:Int){
+    open fun spell(spellDuration: Int) {
 
     }
 
     /**
      * 造成影响
      */
-    open fun effect(){
-
+    open fun effect() {
     }
+
+    open fun pause() {
+        if (!isActive) return
+    }
+
+    open fun resume() {
+        if (!isActive) return
+    }
+
+    open fun stop() {
+        isActive = false
+    }
+
+    open fun findAllEffectUser() : List<User> {
+        return listOf<User>().filter { it.hit(this) }
+    }
+
 
 
 }

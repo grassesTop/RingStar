@@ -5,7 +5,7 @@ import grasses.top.comb.base.Card
 import grasses.top.comb.base.User
 import grasses.top.comb.status.PetrificationStatus
 
-class Petrification:Card() {
+class PetrificationSpell:Card() {
     init {
         star = 3
         name = "石化术"

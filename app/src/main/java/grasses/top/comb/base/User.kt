@@ -1,12 +1,8 @@
 package grasses.top.comb.base
 
-import grasses.top.comb.process.BattleController
-import grasses.top.comb.process.BattleLife
-import grasses.top.comb.process.Turn
-import grasses.top.comb.process.TurnLife
+import grasses.top.comb.process.*
 import grasses.top.comb.thing.OrganicSubstance
 import grasses.top.comb.user.Race
-import grasses.top.comb.user.Resistance
 import grasses.top.comb.user.Shape
 
 open class User : OrganicSubstance(), BattleLife,TurnLife{
@@ -20,6 +16,12 @@ open class User : OrganicSubstance(), BattleLife,TurnLife{
     var elementTalent : ArrayList<BaseElement> = arrayListOf()
     //最大持有元素能量个数
     var maxEnergySize = 10
+    //生物的元素属性
+    var elementSeries = BaseElement.None
+    //阶级
+    var grade = 0
+    //是否是召唤物
+    var isSummon = false
     //战斗流程控制器
     protected var battleController : BattleController? = null
     override fun onBattleStart(battleProcess: BattleProcess) {

@@ -1,5 +1,6 @@
 package grasses.top.comb.thing
 
+import grasses.top.comb.base.Card
 import grasses.top.comb.base.Damage
 import grasses.top.comb.base.Status
 import grasses.top.comb.base.Substance
@@ -14,16 +15,16 @@ open class OrganicSubstance : Substance() {
     val resistance = Resistance(this)
     var isDeath = false//状态,正面状态和负面状态,以及中立状态
     var currentStatus : ArrayList<Status> = arrayListOf()
-    fun destroy(){
-        isDeath = true
-    }
 
     fun decreaseHP(decreasedHP:Int){
         if (decreasedHP <= 0)return
         healthy = Math.max(0,healthy-Math.max(0,decreasedHP - resistance.resistanceData.defense))
         if (healthy == 0){
-            destroy()
+            dismiss()
         }
+    }
+    fun death(){
+        isDeath = true
     }
     fun increaseHP(increasedHP:Int){
         if (increasedHP <= 0)return
@@ -57,5 +58,9 @@ open class OrganicSubstance : Substance() {
         for (currentStatus in currentStatus) {
             resistance.superposeResistance(currentStatus.getOffsetResistance())
         }
+    }
+
+    fun hit(card: Card) : Boolean {
+        return true
     }
 }

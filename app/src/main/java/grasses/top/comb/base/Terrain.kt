@@ -1,9 +1,9 @@
 package grasses.top.comb.base
 
 import grasses.top.comb.process.BattleLife
+import grasses.top.comb.process.BattleProcess
 import grasses.top.comb.process.Turn
 import grasses.top.comb.process.TurnLife
-import java.util.*
 
 class Terrain :BattleLife,TurnLife{
     var weather : Weather? = null

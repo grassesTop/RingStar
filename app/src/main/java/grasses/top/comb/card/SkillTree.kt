@@ -23,20 +23,20 @@ class SkillTree {
     }
 
     private fun addLightSkillDB() {
-        skillS.add(SkillDB("照明术"))
-        skillS.add(SkillDB("神圣耀斑"))
-        skillS.add(SkillDB("大预言术"))
-        skillS.add(SkillDB("预言术"))
-        skillS.add(SkillDB("祛除黑暗"))
-        skillS.add(SkillDB("净化"))
-        skillS.add(SkillDB("驱散"))
+        skillS.add(SkillDB("照明术",true))
+        skillS.add(SkillDB("大预言术",true))
+        skillS.add(SkillDB("预言术",true))
+        skillS.add(SkillDB("驱散",true))
         skillS.add(SkillDB("神圣防御罩"))
         skillS.add(SkillDB("天启"))
         skillS.add(SkillDB("降临"))
         skillS.add(SkillDB("焚烧"))
+        skillS.add(SkillDB("幸运术"))
     }
 
     private fun addDarkSkillDB(){
+        skillS.add(SkillDB("潜行"))
+        skillS.add(SkillDB("隐藏"))
         skillS.add(SkillDB("黑暗降临"))
         skillS.add(SkillDB("诅咒"))
         skillS.add(SkillDB("中毒"))
@@ -53,6 +53,7 @@ class SkillTree {
         skillS.add(SkillDB("不灭火"))
         skillS.add(SkillDB("复生"))
         skillS.add(SkillDB("夺舍"))
+        skillS.add(SkillDB("厄运术"))
     }
 
     private fun addEarthSkillDB(){

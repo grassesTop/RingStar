@@ -1,12 +1,14 @@
-package grasses.top.comb.base
+package grasses.top.comb.process
 
 import android.util.Log
-import grasses.top.comb.process.Turn
+import grasses.top.comb.base.Player
+import grasses.top.comb.base.Terrain
+import grasses.top.comb.base.User
 
 /**
  * 战斗流程
  */
-class BattleProcess(var uses:ArrayList<User>,var terrain : Terrain,var player: ArrayList<Player>) {
+class BattleProcess(var uses:ArrayList<User>, var terrain : Terrain, var player: ArrayList<Player>) {
     var isBattling = true
     private val TAG = BattleProcess::class.simpleName
     var historyTurn:ArrayList<Turn> = arrayListOf()

@@ -3,7 +3,7 @@ package grasses.top.comb.card.fire
 import grasses.top.comb.base.BaseElement
 import grasses.top.comb.base.Card
 
-class FireBall : Card() {
+class FireBallSpell : Card() {
     init {
         star = 1
         name = "火球术"
@@ -15,7 +15,7 @@ class FireBall : Card() {
     override fun upgrade(element: BaseElement): Card? {
         when(element){
             BaseElement.Fire->{
-                return BigFireBall()
+                return BigFireBallSpell()
             }
             else -> {}
         }
