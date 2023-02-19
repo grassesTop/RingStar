@@ -2,25 +2,19 @@ package grasses.top.comb.base
 
 const val BaseElementCount = 9
 enum class BaseElement(var elementName : String,var index : Int) {
-    Light("光",0),
-    Dark("暗",1),
-    Earth("土",2),
+    None("无",0),
+    Metal("金",1),
+    Wood("木",2),
     Water("水",3),
-    Wind("风",4),
-    Fire("火",5),
-    Electric("电",6),
-    Wood("木",7),
-    Metal("金属",8),
-    Spirit("精神",9),
-    Bow("弓",10),
-    Sword("剑",11),
-    Shield("盾",12),
-    Knife("刀",13),
-    Technique("技",14),
-    None("无",15),
-    Space("空间",16),
-    Magic("魔力",17),
-    Strength("体力",18),
+    Fire("火",4),
+    Earth("土",5),
+    Wind("风",6),
+    Electric("电",7),
+    Light("光",8),
+    Dark("暗",9),
+    Spirit("精神",10),
+    Space("空间",11),
+    Time("时间",12),
 }
 
 /**

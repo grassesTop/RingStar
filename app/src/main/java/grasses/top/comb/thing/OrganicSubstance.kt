@@ -1,6 +1,5 @@
 package grasses.top.comb.thing
 
-import grasses.top.comb.R
 import grasses.top.comb.base.Damage
 import grasses.top.comb.base.Status
 import grasses.top.comb.base.Substance
@@ -12,7 +11,7 @@ import grasses.top.comb.user.Resistance
 open class OrganicSubstance : Substance() {
     var healthy = 1000
     var maxHP = 1000
-    var resistance = Resistance(this)
+    val resistance = Resistance(this)
     var isDeath = false//状态,正面状态和负面状态,以及中立状态
     var currentStatus : ArrayList<Status> = arrayListOf()
     fun destroy(){
@@ -21,7 +20,7 @@ open class OrganicSubstance : Substance() {
 
     fun decreaseHP(decreasedHP:Int){
         if (decreasedHP <= 0)return
-        healthy = Math.max(0,healthy-Math.max(0,decreasedHP - resistance.defense))
+        healthy = Math.max(0,healthy-Math.max(0,decreasedHP - resistance.resistanceData.defense))
         if (healthy == 0){
             destroy()
         }
@@ -32,12 +31,12 @@ open class OrganicSubstance : Substance() {
     }
 
     fun takeDamage(damage: Damage){
-        var resistanceForDamage = resistance.getResistanceForDamage(damage)
+        val resistanceForDamage = resistance.getResistanceForDamage(damage)
         decreaseHP(Math.min(0,damage.damage - resistanceForDamage))
     }
 
     fun addStatus(status: Status){
-        var find = currentStatus.find { it.javaClass == status.javaClass }
+        val find = currentStatus.find { it.javaClass == status.javaClass }
         if (find != null){
             find.inCreateLayer()
         }else{
@@ -51,6 +50,12 @@ open class OrganicSubstance : Substance() {
         currentStatus.filter { it.javaClass == status.javaClass }.forEach {
             it.disAttach()
             currentStatus.remove(it)
+        }
+    }
+
+    fun computeResistance(){
+        for (currentStatus in currentStatus) {
+            resistance.superposeResistance(currentStatus.getOffsetResistance())
         }
     }
 }

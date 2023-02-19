@@ -33,4 +33,8 @@ abstract class Status : BattleLife ,TurnLife {
     open fun relevant(status : Status):Int{
         return Resistance.RELEVANT_NONE
     }
+
+    open fun getOffsetResistance():Resistance.ResistanceData?{
+        return null
+    }
 }

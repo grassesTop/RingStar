@@ -1,9 +1,8 @@
 package grasses.top.comb.base
 
-import grasses.top.comb.card.FireBall
 import java.lang.StringBuilder
 
-open class Card {
+open class Card() {
     companion object {
         val sAllCards = HashMap<String,Class<out Card>>()
     }
@@ -19,6 +18,8 @@ open class Card {
     var spellDuration = 20
     var elementSeries = BaseElement.None
     var speller : User? = null
+
+
     /**
      * 返回一个字符串,每个位置表示对应属性的数量,新增的元素放在最后面
      */
@@ -41,6 +42,32 @@ open class Card {
      * 近身,远程,读条,持续,被动,buff,
      */
     var type = 0
+
+    constructor(name: String) :this (){
+        this.name = name
+    }
+
+    constructor(
+        name: String,
+        star: Int,
+        description: String,
+        formula: ArrayList<BaseElement>,
+        spellDuration: Int,
+        elementSeries: BaseElement,
+        speller: User?,
+        type: Int
+    ) : this() {
+        this.name = name
+        this.star = star
+        this.description = description
+        this.formula = formula
+        this.spellDuration = spellDuration
+        this.elementSeries = elementSeries
+        this.speller = speller
+        this.type = type
+    }
+
+
     /**
      * 释放法术
      */

@@ -4,6 +4,7 @@ import grasses.top.comb.base.BattleProcess
 import grasses.top.comb.base.Status
 import grasses.top.comb.process.Turn
 import grasses.top.comb.thing.OrganicSubstance
+import grasses.top.comb.user.Resistance
 
 class StoneSkinStatus:Status() {
     init {
@@ -14,16 +15,8 @@ class StoneSkinStatus:Status() {
         durationTurn = 10
     }
 
-    override fun attach(user: OrganicSubstance) {
-        super.attach(user)
-        user.resistance.splitResistance.plus(1)
-        user.resistance.burnResistance.plus(1)
-    }
-
-    override fun disAttach() {
-        organicSubstance?.resistance?.splitResistance?.plus(-1)
-        organicSubstance?.resistance?.burnResistance?.plus(-1)
-        super.disAttach()
+    override fun getOffsetResistance(): Resistance.ResistanceData {
+        return Resistance.ResistanceData(splitResistance = 2, burnResistance = 2)
     }
 
     override fun disCreateLayer() {
@@ -56,4 +49,5 @@ class StoneSkinStatus:Status() {
             disAttach()
         }
     }
+
 }

@@ -51,7 +51,10 @@ class BattleController(var user: User) : BattleLife,TurnLife{
         repeat(2){
             createElement(generateElementEnergy())
         }
-        user.currentStatus.forEach { it.onTurnStart(turn) }
+        user.currentStatus.forEach {
+            it.onTurnStart(turn)
+        }
+        user.computeResistance()
     }
 
     /**

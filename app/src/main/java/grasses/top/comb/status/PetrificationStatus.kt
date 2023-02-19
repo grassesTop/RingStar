@@ -9,7 +9,7 @@ import grasses.top.comb.user.Resistance
 class PetrificationStatus:Status() {
     init {
         name = "石化"
-        description = "免疫流血状态,增加割裂抗性一点"
+        description = "免疫流血状态,增加割裂抗性一点,无法操作"
     }
 
     override fun relevant(status: Status): Int {
@@ -20,14 +20,8 @@ class PetrificationStatus:Status() {
         }
     }
 
-    override fun attach(user: OrganicSubstance) {
-        super.attach(user)
-        organicSubstance?.resistance?.splitResistance?.plus(1)
-    }
-
-    override fun disAttach() {
-        organicSubstance?.resistance?.splitResistance?.plus(-1)
-        super.disAttach()
+    override fun getOffsetResistance(): Resistance.ResistanceData {
+        return Resistance.ResistanceData(splitResistance = 1)
     }
 
     override fun inCreateLayer() {

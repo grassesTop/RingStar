@@ -1,4 +1,4 @@
-package grasses.top.comb.card
+package grasses.top.comb.card.earth
 
 import grasses.top.comb.base.BaseElement
 import grasses.top.comb.base.Card
@@ -10,5 +10,6 @@ class Meteorite: Card() {
         formula = arrayListOf(BaseElement.Earth,BaseElement.Earth,BaseElement.Earth,BaseElement.Earth,BaseElement.Earth)
         description = ""
         spellDuration = 50
+        elementSeries = BaseElement.Earth
     }
 }

@@ -1,7 +1,8 @@
-package grasses.top.comb.card
+package grasses.top.comb.card.earth
 
 import grasses.top.comb.base.BaseElement
 import grasses.top.comb.base.Card
+import grasses.top.comb.status.StoneSkinStatus
 
 class StoneSkin : Card(){
     init {
@@ -11,4 +12,10 @@ class StoneSkin : Card(){
         formula = arrayListOf(BaseElement.Earth)
         description = "增加2物理防御,火焰防御2,持续10回合"
     }
+
+    override fun effect() {
+        super.effect()
+        speller?.addStatus(StoneSkinStatus())
+    }
+
 }

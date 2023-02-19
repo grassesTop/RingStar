@@ -1,7 +1,9 @@
-package grasses.top.comb.card
+package grasses.top.comb.card.spirit
 
 import grasses.top.comb.base.BaseElement
 import grasses.top.comb.base.Card
+import grasses.top.comb.base.User
+import grasses.top.comb.status.PetrificationStatus
 
 class Petrification:Card() {
     init {
@@ -13,6 +15,14 @@ class Petrification:Card() {
         elementSeries = BaseElement.Earth
     }
 
+    override fun effect() {
+        super.effect()
+        var lookUsers = arrayListOf<User>()
+        for (lookUser in lookUsers) {
+            lookUser.addStatus(PetrificationStatus())
+        }
+
+    }
 
 
 }

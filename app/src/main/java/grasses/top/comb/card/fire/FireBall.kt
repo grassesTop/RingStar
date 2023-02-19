@@ -1,4 +1,4 @@
-package grasses.top.comb.card
+package grasses.top.comb.card.fire
 
 import grasses.top.comb.base.BaseElement
 import grasses.top.comb.base.Card
