@@ -1,9 +1,10 @@
-package grasses.top.comb.thing
+package grasses.top.comb.thing.inorganic
 
 import grasses.top.comb.process.Turn
 import grasses.top.comb.process.TurnLife
+import grasses.top.comb.thing.LowPressure
 
-class Pressure:InorganicSubstance(),TurnLife,LowPressure {
+class Pressure: InorganicSubstance(),TurnLife, LowPressure {
     init {
         name = "高压"
     }

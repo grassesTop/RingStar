@@ -1,11 +1,12 @@
-package grasses.top.comb.thing
+package grasses.top.comb.thing.inorganic
 
 import grasses.top.comb.base.Substance
 import grasses.top.comb.damage.Burn
 import grasses.top.comb.damage.Frostbite
 import grasses.top.comb.damage.Lash
+import grasses.top.comb.thing.organic.OrganicSubstance
 
-class Tree:OrganicSubstance() {
+class Tree: OrganicSubstance() {
     init {
         name = "树木"
     }

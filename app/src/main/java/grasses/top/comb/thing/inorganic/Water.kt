@@ -1,4 +1,4 @@
-package grasses.top.comb.thing
+package grasses.top.comb.thing.inorganic
 
 import grasses.top.comb.base.Substance
 

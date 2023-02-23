@@ -1,8 +1,10 @@
-package grasses.top.comb.thing
+package grasses.top.comb.thing.inorganic
 
 import grasses.top.comb.base.Substance
+import grasses.top.comb.thing.LowTemperature
+import grasses.top.comb.thing.UltrahighTemperature
 
-class IronMelt : InorganicSubstance(),UltrahighTemperature {
+class IronMelt : InorganicSubstance(), UltrahighTemperature {
     init {
         name = "铁水"
     }

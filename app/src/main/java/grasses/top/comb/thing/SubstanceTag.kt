@@ -50,5 +50,7 @@ interface HighlyToxic
 interface Reflection
 //自发光
 interface Luminescence
+//活物
+interface Active
 
 

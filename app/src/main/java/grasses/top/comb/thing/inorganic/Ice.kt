@@ -1,8 +1,9 @@
-package grasses.top.comb.thing
+package grasses.top.comb.thing.inorganic
 
 import grasses.top.comb.base.Substance
+import grasses.top.comb.thing.*
 
-class Ice : InorganicSubstance(),LowTemperature,UltraLowTemperature {
+class Ice : InorganicSubstance(), LowTemperature, UltraLowTemperature {
     init {
         name = "冰"
     }

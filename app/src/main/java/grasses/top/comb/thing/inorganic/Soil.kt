@@ -1,8 +1,9 @@
-package grasses.top.comb.thing
+package grasses.top.comb.thing.inorganic
 
 import grasses.top.comb.base.Substance
+import grasses.top.comb.thing.UltrahighTemperature
 
-class Soil:InorganicSubstance() {
+class Soil: InorganicSubstance() {
     init {
         name = "土"
     }

@@ -1,7 +1,7 @@
 package grasses.top.comb.base
 
 import grasses.top.comb.process.*
-import grasses.top.comb.thing.OrganicSubstance
+import grasses.top.comb.thing.organic.OrganicSubstance
 import grasses.top.comb.user.Race
 import grasses.top.comb.user.Shape
 

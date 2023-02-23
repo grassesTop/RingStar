@@ -1,9 +1,11 @@
-package grasses.top.comb.thing
+package grasses.top.comb.thing.inorganic
 
 import grasses.top.comb.base.Substance
-import java.io.File
+import grasses.top.comb.thing.inorganic.Carbon
+import grasses.top.comb.thing.inorganic.Fire
+import grasses.top.comb.thing.inorganic.InorganicSubstance
 
-class Wood:InorganicSubstance() {
+class Wood: InorganicSubstance() {
     init {
         name = "木头"
     }

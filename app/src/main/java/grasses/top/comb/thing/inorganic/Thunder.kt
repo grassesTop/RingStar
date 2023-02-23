@@ -1,11 +1,11 @@
-package grasses.top.comb.thing
+package grasses.top.comb.thing.inorganic
 
 import grasses.top.comb.base.Substance
 import grasses.top.comb.process.Turn
 import grasses.top.comb.process.TurnLife
-import kotlin.time.Duration
+import grasses.top.comb.thing.inorganic.InorganicSubstance
 
-class Thunder:InorganicSubstance(),TurnLife {
+class Thunder: InorganicSubstance(),TurnLife {
 
     override fun mergeSubstance(substance: Substance): Substance? {
         return super.mergeSubstance(substance)

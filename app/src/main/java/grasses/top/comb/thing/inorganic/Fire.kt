@@ -1,8 +1,11 @@
-package grasses.top.comb.thing
+package grasses.top.comb.thing.inorganic
 
 import grasses.top.comb.base.Substance
 import grasses.top.comb.process.Turn
 import grasses.top.comb.process.TurnLife
+import grasses.top.comb.thing.HighTemperature
+import grasses.top.comb.thing.LowTemperature
+import grasses.top.comb.thing.StrongWind
 
 class Fire : InorganicSubstance(), TurnLife, HighTemperature {
     init {

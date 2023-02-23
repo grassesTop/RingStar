@@ -27,9 +27,9 @@ class SkillTree {
         skillS.add(SkillDB("大预言术",true))
         skillS.add(SkillDB("预言术",true))
         skillS.add(SkillDB("驱散",true))
-        skillS.add(SkillDB("神圣防御罩"))
+        skillS.add(SkillDB("圣盾",true))
         skillS.add(SkillDB("天启"))
-        skillS.add(SkillDB("降临"))
+        skillS.add(SkillDB("天使降临"))
         skillS.add(SkillDB("焚烧"))
         skillS.add(SkillDB("幸运术"))
     }

@@ -1,8 +1,11 @@
-package grasses.top.comb.thing
+package grasses.top.comb.thing.inorganic
 
 import grasses.top.comb.base.Substance
+import grasses.top.comb.thing.Combustible
+import grasses.top.comb.thing.Explosive
+import grasses.top.comb.thing.HighTemperature
 
-class Oil:InorganicSubstance(),Explosive,Combustible {
+class Oil: InorganicSubstance(), Explosive, Combustible {
     init {
         name = "油"
     }
